@@ -1,0 +1,27 @@
+Package: styler.putyourstyleguidehere
+Title: Third-party Style Guide For 'putyourstyleguidehere'
+Version: 0.0.1
+Authors@R: 
+    person(given = "Hand",
+           family = "Muster",
+           role = c("aut", "cre"),
+           email = "hans@muster.de")
+Description: styles code according to the putyourstyleguidehere using
+    'styler'.
+License: MIT + file LICENSE
+Imports: 
+    magrittr,
+    purrr,
+    styler (>= 1.4.1.9003)
+Suggests: 
+    fs,
+    knitr,
+    rlang,
+    testthat (>= 3.0.0),
+    usethis,
+    withr
+Config/testthat/edition: 3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
