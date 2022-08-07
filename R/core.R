@@ -1,4 +1,4 @@
-version <- unlist(unname(read.dcf("DESCRIPTION")[, "Version"]))
+version = unlist(unname(read.dcf("DESCRIPTION")[, "Version"]))
 
 #' The equals style
 #'
@@ -12,28 +12,28 @@ version <- unlist(unname(read.dcf("DESCRIPTION")[, "Version"]))
 #' style_text("x <- 1")
 #' @importFrom purrr partial
 #' @export
-equals_style <- function(scope = "tokens",
+equals_style = function(scope = "tokens",
                                         strict = TRUE,
                                         indent_by = 2,
                                         start_comments_with_one_space = FALSE,
                                         reindention = tidyverse_reindention(),
                                         math_token_spacing = tidyverse_math_token_spacing()) {
-  args <- as.list(environment())
-  scope <- styler:::scope_normalize(scope)
-  indention_manipulators <- if ("indention" %in% scope) {
+  args = as.list(environment())
+  scope = styler:::scope_normalize(scope)
+  indention_manipulators = if ("indention" %in% scope) {
     list()
   }
-  space_manipulators <- if ("spaces" %in% scope) {
-    list()
-  }
-
-  use_raw_indention <- !("indention" %in% scope) || length(indention_manipulators) < 1
-
-  line_break_manipulators <- if ("line_breaks" %in% scope) {
+  space_manipulators = if ("spaces" %in% scope) {
     list()
   }
 
-  token_manipulators <- if ("tokens" %in% scope) {
+  use_raw_indention = !("indention" %in% scope) || length(indention_manipulators) < 1
+
+  line_break_manipulators = if ("line_breaks" %in% scope) {
+    list()
+  }
+
+  token_manipulators = if ("tokens" %in% scope) {
     list(force_assignment_eq = force_assignment_eq)
   }
 

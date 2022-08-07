@@ -32,7 +32,7 @@ styler::specify_transformers_drop
 #' See [styler::style_dir()] for details, examples and more.
 #' @inheritParams styler::style_dir
 #' @export
-style_dir <- function(path = ".",
+style_dir = function(path = ".",
                       ...,
                       style = equals_style,
                       transformers = style(...),
@@ -62,7 +62,7 @@ style_dir <- function(path = ".",
 #' See [styler::style_file()] for details, examples and more.
 #' @inheritParams styler::style_file
 #' @export
-style_file <- function(path,
+style_file = function(path,
                        ...,
                        style = equals_style,
                        transformers = style(...),
@@ -83,7 +83,7 @@ style_file <- function(path,
 #' See [styler::style_pkg()] for details, examples and more.
 #' @inheritParams styler::style_pkg
 #' @export
-style_pkg <- function(pkg = ".",
+style_pkg = function(pkg = ".",
                       ...,
                       style = equals_style,
                       transformers = style(...),
@@ -113,7 +113,7 @@ style_pkg <- function(pkg = ".",
 #' See [styler::style_text()] for details, examples and more.
 #' @inheritParams styler::style_text
 #' @export
-style_text <- function(text,
+style_text = function(text,
                        ...,
                        style = equals_style,
                        transformers = style(...),
