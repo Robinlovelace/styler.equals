@@ -2,12 +2,12 @@
 % Please edit documentation in R/re-export.R
 \name{style_file}
 \alias{style_file}
-\title{Like \code{\link[styler:style_file]{styler::style_file()}}, but \code{style} defaulting to \code{putyourstyleguidehere_style}}
+\title{Like \code{\link[styler:style_file]{styler::style_file()}}, but \code{style} defaulting to \code{equals_style}}
 \usage{
 style_file(
   path,
   ...,
-  style = putyourstyleguidehere_style,
+  style = equals_style,
   transformers = style(...),
   include_roxygen_examples = TRUE,
   base_indention = 0,
@@ -15,8 +15,7 @@ style_file(
 )
 }
 \arguments{
-\item{path}{A character vector with paths to files to style. Supported
-extensions: \code{.R}, \code{.Rmd}, \code{.Rmarkdown}, \code{.qmd} and \code{.Rnw}.}
+\item{path}{A character vector with paths to files to style.}
 
 \item{...}{Arguments passed on to the \code{style} function.}
 

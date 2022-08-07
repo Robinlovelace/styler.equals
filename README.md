@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# styler.putyourstyleguidehere
+# styler.equals
 
 This is a GitHub template to create and distribute a custom {styler}
 style guide. For more info, see the [{styler}
@@ -13,7 +13,7 @@ button:
 
 Here’s what you have to do once you created your repo from the template.
 
--   search for `putyourstyleguidehere_style` and replace it with the
+-   search for `equals_style` and replace it with the
     name of your style guide.
 
 -   Adapt the authors field in `DESCRIPTION`.
@@ -23,7 +23,7 @@ Here’s what you have to do once you created your repo from the template.
     `"styler::tidyverse_style@https://github.com/r-lib"`. See
     `help(create_style_guide, package = "styler")` for details.
 
--   adapt the function `putyourstyleguidehere_style()` (the drop-in for
+-   adapt the function `equals_style()` (the drop-in for
     `styler::tidyverse_style`) such that it does what you want.
     Currently, all the style guide is doing is to replace `<-` with `=`
 
@@ -35,19 +35,19 @@ Here’s what you have to do once you created your repo from the template.
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/putyourstyleguidehere/styler.putyourstyleguidehere/workflows/R-CMD-check/badge.svg)](https://github.com/putyourstyleguidehere/styler.putyourstyleguidehere/actions)
+[![R-CMD-check](https://github.com/equals/styler.equals/workflows/R-CMD-check/badge.svg)](https://github.com/equals/styler.equals/actions)
 <!-- badges: end -->
 
-The goal of {styler.putyourstyleguidehere} is… It is a third-party style
+The goal of {styler.equals} is… It is a third-party style
 guide for [{styler}](https://styler.r-lib.org).
 
 ## Installation
 
-You can install the released version of {styler.putyourstyleguidehere}
+You can install the released version of {styler.equals}
 from [GitHub](https://github.com) with:
 
 ``` r
-remotes::install_github("putyourstyleguidehere/styler.putyourstyleguidehere")
+remotes::install_github("equals/styler.equals")
 ```
 
 ## Example
@@ -55,7 +55,7 @@ remotes::install_github("putyourstyleguidehere/styler.putyourstyleguidehere")
 This is a basic example of how to style code with it.
 
 ``` r
-library(styler.putyourstyleguidehere)
+library(styler.equals)
 cache_deactivate()
 text <- "x <- 4
 y = 3

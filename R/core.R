@@ -1,17 +1,18 @@
 version <- unlist(unname(read.dcf("DESCRIPTION")[, "Version"]))
 
-#' The putyourstyleguidehere style
+#' The equals style
 #'
-#' Style code according to the putyourstyleguidehere style guide. For more
+#' Style code according to the equals style guide. For more
 #' details and docs, see the [styler::tidyverse_style()].
 #' @inheritParams styler::tidyverse_style
 #' @family obtain transformers
 #' @family style_guides
 #' @examples
 #' style_text("call( 1)", scope = "spaces")
+#' style_text("x <- 1")
 #' @importFrom purrr partial
 #' @export
-putyourstyleguidehere_style <- function(scope = "tokens",
+equals_style <- function(scope = "tokens",
                                         strict = TRUE,
                                         indent_by = 2,
                                         start_comments_with_one_space = FALSE,
@@ -48,7 +49,7 @@ putyourstyleguidehere_style <- function(scope = "tokens",
     # transformer options
     use_raw_indention = use_raw_indention,
     reindention = reindention,
-    style_guide_name = "styler.putyourstyleguidehere::putyourstyleguidehere_style@https://github.com/putyourGitHubUserNameHere/styler.putyourstyleguidehere/",
+    style_guide_name = "styler.equals::equals_style@https://github.com/robinlovelace/styler.equals/",
     style_guide_version = version,
     more_specs_style_guide = args
   )

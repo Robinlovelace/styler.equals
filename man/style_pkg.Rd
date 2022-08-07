@@ -2,12 +2,12 @@
 % Please edit documentation in R/re-export.R
 \name{style_pkg}
 \alias{style_pkg}
-\title{Like \code{\link[styler:style_pkg]{styler::style_pkg()}}, but \code{style} defaulting to \code{putyourstyleguidehere_style}}
+\title{Like \code{\link[styler:style_pkg]{styler::style_pkg()}}, but \code{style} defaulting to \code{equals_style}}
 \usage{
 style_pkg(
   pkg = ".",
   ...,
-  style = putyourstyleguidehere_style,
+  style = equals_style,
   transformers = style(...),
   filetype = c("R", "Rprofile"),
   exclude_files = "R/RcppExports.R",

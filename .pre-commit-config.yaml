@@ -6,7 +6,7 @@ repos:
     hooks:
     -   id: style-files
         require_serial: True
-        # args: [--style_pkg=styler.putyourstyleguidehere_, --style_fun=putyourstyleguidehere_style]
+        # args: [--style_pkg=styler.equals_, --style_fun=equals_style]
         exclude: 'tests/testthat/.*/.*\.R'
     -   id: roxygenize
     # codemeta must be above use-tidy-description when both are used

@@ -2,12 +2,12 @@
 % Please edit documentation in R/re-export.R
 \name{style_text}
 \alias{style_text}
-\title{Like \code{\link[styler:style_text]{styler::style_text()}}, but \code{style} defaulting to \code{putyourstyleguidehere_style}}
+\title{Like \code{\link[styler:style_text]{styler::style_text()}}, but \code{style} defaulting to \code{equals_style}}
 \usage{
 style_text(
   text,
   ...,
-  style = putyourstyleguidehere_style,
+  style = equals_style,
   transformers = style(...),
   include_roxygen_examples = TRUE,
   base_indention = 0

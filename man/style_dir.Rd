@@ -2,12 +2,12 @@
 % Please edit documentation in R/re-export.R
 \name{style_dir}
 \alias{style_dir}
-\title{Like \code{\link[styler:style_dir]{styler::style_dir()}}, but \code{style} defaulting to \code{putyourstyleguidehere_style}}
+\title{Like \code{\link[styler:style_dir]{styler::style_dir()}}, but \code{style} defaulting to \code{equals_style}}
 \usage{
 style_dir(
   path = ".",
   ...,
-  style = putyourstyleguidehere_style,
+  style = equals_style,
   transformers = style(...),
   filetype = c("R", "Rprofile"),
   recursive = TRUE,

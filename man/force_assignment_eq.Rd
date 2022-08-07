@@ -10,11 +10,4 @@ force_assignment_eq(pd)
 Because you can't determine from a nest with \verb{<-} what the context is,
 we need to do it from the parent.
 }
-\examples{
-\dontshow{if (rlang::is_installed("data.tree")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-# identical
-styler:::create_tree("x <- 2")
-styler:::create_tree("c(x <- 2)")
-\dontshow{\}) # examplesIf}
-}
 \keyword{internal}

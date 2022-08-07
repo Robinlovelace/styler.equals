@@ -27,14 +27,14 @@ styler::specify_reindention
 #' @export
 styler::specify_transformers_drop
 
-#' Like [styler::style_dir()], but `style` defaulting to `putyourstyleguidehere_style`
+#' Like [styler::style_dir()], but `style` defaulting to `equals_style`
 #'
 #' See [styler::style_dir()] for details, examples and more.
 #' @inheritParams styler::style_dir
 #' @export
 style_dir <- function(path = ".",
                       ...,
-                      style = putyourstyleguidehere_style,
+                      style = equals_style,
                       transformers = style(...),
                       filetype = c("R", "Rprofile"),
                       recursive = TRUE,
@@ -57,14 +57,14 @@ style_dir <- function(path = ".",
   )
 }
 
-#' Like [styler::style_file()], but `style` defaulting to `putyourstyleguidehere_style`
+#' Like [styler::style_file()], but `style` defaulting to `equals_style`
 #'
 #' See [styler::style_file()] for details, examples and more.
 #' @inheritParams styler::style_file
 #' @export
 style_file <- function(path,
                        ...,
-                       style = putyourstyleguidehere_style,
+                       style = equals_style,
                        transformers = style(...),
                        include_roxygen_examples = TRUE,
                        base_indention = 0,
@@ -78,14 +78,14 @@ style_file <- function(path,
   )
 }
 
-#' Like [styler::style_pkg()], but `style` defaulting to `putyourstyleguidehere_style`
+#' Like [styler::style_pkg()], but `style` defaulting to `equals_style`
 #'
 #' See [styler::style_pkg()] for details, examples and more.
 #' @inheritParams styler::style_pkg
 #' @export
 style_pkg <- function(pkg = ".",
                       ...,
-                      style = putyourstyleguidehere_style,
+                      style = equals_style,
                       transformers = style(...),
                       filetype = c("R", "Rprofile"),
                       exclude_files = "R/RcppExports.R",
@@ -108,14 +108,14 @@ style_pkg <- function(pkg = ".",
 }
 
 
-#' Like [styler::style_text()], but `style` defaulting to `putyourstyleguidehere_style`
+#' Like [styler::style_text()], but `style` defaulting to `equals_style`
 #'
 #' See [styler::style_text()] for details, examples and more.
 #' @inheritParams styler::style_text
 #' @export
 style_text <- function(text,
                        ...,
-                       style = putyourstyleguidehere_style,
+                       style = equals_style,
                        transformers = style(...),
                        include_roxygen_examples = TRUE,
                        base_indention = 0) {

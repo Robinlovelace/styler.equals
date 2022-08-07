@@ -1,12 +1,12 @@
-Package: styler.putyourstyleguidehere
-Title: Third-party Style Guide For 'putyourstyleguidehere'
+Package: styler.equals
+Title: Third-party 'Equals Style' Guide For 'styler'
 Version: 0.0.1
-Authors@R: 
-    person(given = "Hand",
-           family = "Muster",
-           role = c("aut", "cre"),
-           email = "hans@muster.de")
-Description: styles code according to the putyourstyleguidehere using
+Authors@R: c(
+    person("Robin", "Lovelace", email = "rob00x@gmail.com", role = c("aut","cre"),
+      comment = c(ORCID = "0000-0001-5679-6536"))
+  )
+Description: Styles code according to the 'equals style'
+    used in the book Geocomputation with R using
     'styler'.
 License: MIT + file LICENSE
 Imports: 
@@ -24,4 +24,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
