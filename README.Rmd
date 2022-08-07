@@ -43,13 +43,14 @@ remotes::install_github("robinlovelace/styler.equals")
 
 This is a basic example of how to style code with it.
 
-```{r example, eval = FALSE}
+```{r example}
 library(styler.equals)
 cache_deactivate()
-text <- "x <- 4
+text = "x <- 4
 y = 3
 a;
 "
 
-style_text(text)
+text_styled_equals = style_text(text)
+text_styled_equals
 ```

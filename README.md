@@ -41,10 +41,15 @@ This is a basic example of how to style code with it.
 ``` r
 library(styler.equals)
 cache_deactivate()
-text <- "x <- 4
+#> Deactivated cache.
+text = "x <- 4
 y = 3
 a;
 "
 
-style_text(text)
+text_styled_equals = style_text(text)
+text_styled_equals
+#> x = 4
+#> y = 3
+#> a;
 ```
