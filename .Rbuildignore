@@ -3,3 +3,4 @@
 ^README\.Rmd$
 ^\.pre-commit-config\.yaml$
 ^\.github$
+^cran-comments\.md$
