@@ -19,7 +19,7 @@ equals_style = function(scope = "tokens",
                                         reindention = tidyverse_reindention(),
                                         math_token_spacing = tidyverse_math_token_spacing()) {
   args = as.list(environment())
-  scope = styler:::scope_normalize(scope)
+  scope = styler::scope_normalize(scope)
   indention_manipulators = if ("indention" %in% scope) {
     list()
   }
