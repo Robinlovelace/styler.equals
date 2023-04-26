@@ -22,10 +22,10 @@ This package is based on https://github.com/lorenzwalthert/styler.yours
 [![R-CMD-check](https://github.com/robinlovelace/styler.equals/workflows/R-CMD-check/badge.svg)](https://github.com/robinlovelace/styler.equals/actions)
 <!-- badges: end -->
 
-The goal of {styler.equals} is to provide an implementation of the 'equals style' used by Yuhei Xie, Colin Gillespie and many in the [#rspatial](https://twitter.com/hashtag/rspatial) community.
+The goal of {styler.equals} is to provide an implementation of the 'equals style' used by Yuhei Xie, Colin Gillespie and many in the `#rspatial` community.
 
 So far it basically just the 'tidyverse style' but with equals assignment.
-In the future it may evolve, e.g. to implement the [Geocomputation with R style guide](https://github.com/Robinlovelace/geocompr/blob/main/misc/our-style.md).
+In the future it may evolve, e.g. to implement the [Geocomputation with R style guide](https://github.com/geocompx/geocompr/blob/main/misc/our-style.md).
 
 It is a third-party
 style guide for [{styler}](https://styler.r-lib.org).
