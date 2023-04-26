@@ -10,7 +10,6 @@ Description: Styles code according to the 'equals style'
     'styler'.
 License: MIT + file LICENSE
 Imports: 
-    magrittr,
     purrr,
     styler (>= 1.4.1.9003)
 Suggests: 

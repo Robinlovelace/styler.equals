@@ -4,3 +4,4 @@
 ^\.pre-commit-config\.yaml$
 ^\.github$
 ^cran-comments\.md$
+^styler\.equals\.Rproj$

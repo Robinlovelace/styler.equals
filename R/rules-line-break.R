@@ -4,10 +4,10 @@
 #' we need to do it from the parent.
 #' @keywords internal
 force_assignment_eq = function(pd) {
-  if (styler:::is_function_call(pd)) {
+  if (styler::is_function_call(pd)) {
     return(pd)
   }
-  before_assignemnt = styler:::previous_non_comment(
+  before_assignemnt = styler::previous_non_comment(
     pd,
     which(pd$token == "expr")[1]
   )
