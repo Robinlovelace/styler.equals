@@ -11,7 +11,7 @@ Description: Styles code according to the 'equals style'
 License: MIT + file LICENSE
 Imports: 
     purrr,
-    styler (>= 1.4.1.9003)
+    styler (>= 1.9.1)
 Suggests: 
     fs,
     knitr,
