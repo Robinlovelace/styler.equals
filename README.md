@@ -10,7 +10,7 @@ This package is based on
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/robinlovelace/styler.equals/workflows/R-CMD-check/badge.svg)](https://github.com/robinlovelace/styler.equals/actions)
+[![R-CMD-check](https://github.com/Robinlovelace/styler.equals/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Robinlovelace/styler.equals/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of {styler.equals} is to provide an implementation of the
