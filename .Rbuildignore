@@ -6,3 +6,4 @@
 ^cran-comments\.md$
 ^styler\.equals\.Rproj$
 ^CRAN-SUBMISSION$
+^LICENSE\.md$
