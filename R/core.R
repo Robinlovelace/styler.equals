@@ -123,7 +123,7 @@ equals_style = function(scope = "tokens",
   token_manipulators = if ("tokens" %in% scope) {
     list(
       fix_quotes = fix_quotes,
-      force_assignment_op = force_assignment_op,
+      force_assignment_op = force_assignment_eq,
       resolve_semicolon = resolve_semicolon,
       add_brackets_in_pipe = add_brackets_in_pipe,
       wrap_if_else_while_for_fun_multi_line_in_curly =
