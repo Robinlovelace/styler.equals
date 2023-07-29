@@ -79,7 +79,45 @@ equals_style = function(scope = "tokens",
   use_raw_indention = !("indention" %in% scope) || length(indention_manipulators) < 1
 
   line_break_manipulators = if ("line_breaks" %in% scope) {
-    list()
+    list(
+      set_line_break_around_comma_and_or = set_line_break_around_comma_and_or,
+      set_line_break_after_assignment = set_line_break_after_assignment,
+      set_line_break_before_curly_opening = set_line_break_before_curly_opening,
+      remove_line_break_before_round_closing_after_curly =
+        if (strict) remove_line_break_before_round_closing_after_curly,
+      remove_line_breaks_in_fun_dec =
+        if (strict) remove_line_breaks_in_fun_dec,
+      style_line_break_around_curly = partial(
+        style_line_break_around_curly,
+        strict
+      ),
+      # must be after style_line_break_around_curly as it remove line
+      # breaks again for {{.
+      set_line_break_around_curly_curly = set_line_break_around_curly_curly,
+      set_line_break_before_closing_call = if (strict) {
+        partial(
+          set_line_break_before_closing_call,
+          except_token_before = "COMMENT"
+        )
+      },
+      set_line_break_after_opening_if_call_is_multi_line = if (strict) {
+        partial(
+          set_line_break_after_opening_if_call_is_multi_line,
+          except_token_after = "COMMENT",
+          # don't modify line break here
+          except_text_before = c("ifelse", "if_else"),
+          force_text_before = "switch" # force line break after first token
+        )
+      },
+      remove_line_break_in_fun_call = purrr::partial(
+        remove_line_break_in_fun_call,
+        strict = strict
+      ),
+      add_line_break_after_pipe = if (strict) add_line_break_after_pipe,
+      set_line_break_after_ggplot2_plus = if (strict) {
+        set_line_break_after_ggplot2_plus
+      }
+    )
   }
 
   token_manipulators = if ("tokens" %in% scope) {
