@@ -36,7 +36,44 @@ equals_style = function(scope = "tokens",
   }
 
   space_manipulators = if ("spaces" %in% scope) {
-    list()
+    list(
+      remove_space_before_closing_paren = remove_space_before_closing_paren,
+      remove_space_before_opening_paren = if (strict) {
+        remove_space_before_opening_paren
+      },
+      add_space_after_for_if_while = add_space_after_for_if_while,
+      remove_space_before_comma = remove_space_before_comma,
+      style_space_around_math_token = partial(
+        style_space_around_math_token, strict,
+        math_token_spacing$zero,
+        math_token_spacing$one
+      ),
+      style_space_around_tilde = partial(
+        style_space_around_tilde,
+        strict = strict
+      ),
+      spacing_around_op = purrr::partial(set_space_around_op,
+                                         strict = strict
+      ),
+      remove_space_after_opening_paren = remove_space_after_opening_paren,
+      remove_space_after_excl = remove_space_after_excl,
+      set_space_after_bang_bang = set_space_after_bang_bang,
+      remove_space_before_dollar = remove_space_before_dollar,
+      remove_space_after_fun_dec = remove_space_after_fun_dec,
+      remove_space_around_colons = remove_space_around_colons,
+      start_comments_with_space = partial(start_comments_with_space,
+                                          force_one = start_comments_with_one_space
+      ),
+      remove_space_after_unary_pm_nested = remove_space_after_unary_pm_nested,
+      spacing_before_comments = if (strict) {
+        set_space_before_comments
+      } else {
+        add_space_before_comments
+      },
+      set_space_between_levels = set_space_between_levels,
+      set_space_between_eq_sub_and_comma = set_space_between_eq_sub_and_comma,
+      set_space_in_curly_curly = set_space_in_curly_curly
+    )
   }
 
   use_raw_indention = !("indention" %in% scope) || length(indention_manipulators) < 1
