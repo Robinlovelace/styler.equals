@@ -37,7 +37,7 @@ unindent_fun_dec <- function(pd, indent_by = 2L) {
 #' `is_function_declaration`. It is double indented if the first token
 #' after the first line break that is a `"SYMBOL_FORMALS"`.
 #' @param pd A parse table.
-#' @inheritParams styler::tidyverse_style
+#' @inheritParams tidyverse_style
 #' @keywords internal
 is_double_indent_function_declaration <- function(pd, indent_by = 2L) {
   head_pd <- vec_slice(pd, -nrow(pd))
