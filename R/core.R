@@ -31,10 +31,13 @@ equals_style = function(scope = "tokens",
   transformers$style_guide_version = version
 
   # reverse tranformer to make <- into =
-  transformers$token$force_assignment_op =force_assignment_eq
-  # also overwrite rules for transformer dropping
-  # help(specify_transformers_drop)
-  transformers$transformers_drop$token$force_assignment_op = "LEFT_ASSIGN"
+  if ('tokens' %in% scope_normalize(scope)) {
+    transformers$token$force_assignment_op = force_assignment_eq
+    # also overwrite rules for transformer dropping
+    # help(specify_transformers_drop)
+    transformers$transformers_drop$token$force_assignment_op = "LEFT_ASSIGN"
+
+  }
 
   transformers
 }
