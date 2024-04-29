@@ -6,3 +6,12 @@ test_that("line break for multi-line function declaration", {
     transformer = style_text,
   ), NA)
 })
+
+
+test_that('assignment in ', {
+  input <- "c(a <- 3)"
+  expect_equal(
+    as.character(style_text(input)),
+    input
+  )
+})

@@ -18,39 +18,26 @@ equals_style = function(scope = "tokens",
                                         start_comments_with_one_space = FALSE,
                                         reindention = tidyverse_reindention(),
                                         math_token_spacing = tidyverse_math_token_spacing()) {
-  args = as.list(environment())
-  scope = styler::scope_normalize(scope)
-  indention_manipulators = if ("indention" %in% scope) {
-    list()
-  }
-  space_manipulators = if ("spaces" %in% scope) {
-    list()
-  }
-
-  use_raw_indention = !("indention" %in% scope) || length(indention_manipulators) < 1
-
-  line_break_manipulators = if ("line_breaks" %in% scope) {
-    list()
-  }
-
-  token_manipulators = if ("tokens" %in% scope) {
-    list(force_assignment_eq = force_assignment_eq)
-  }
-
-
-
-  create_style_guide(
-    # transformer functions
-    initialize = default_style_guide_attributes,
-    line_break = line_break_manipulators,
-    space = space_manipulators,
-    indention = indention_manipulators,
-    token = token_manipulators,
-    # transformer options
-    use_raw_indention = use_raw_indention,
+  # derive from tidyverse
+  transformers = styler::tidyverse_style(
+    scope=scope,
+    strict = strict,
+    indent_by = indent_by,
+    start_comments_with_one_space = start_comments_with_one_space,
     reindention = reindention,
-    style_guide_name = "styler.equals::equals_style@https://github.com/robinlovelace/styler.equals/",
-    style_guide_version = version,
-    more_specs_style_guide = args
+    math_token_spacing = math_token_spacing
   )
+  transformers$style_guide_name = "styler.equals::equals_stylehttps://github.com/Robinlovelace"
+  transformers$style_guide_version = version
+
+  # reverse tranformer to make <- into =
+  if ('tokens' %in% scope_normalize(scope)) {
+    transformers$token$force_assignment_op = force_assignment_eq
+    # also overwrite rules for transformer dropping
+    # help(specify_transformers_drop)
+    transformers$transformers_drop$token$force_assignment_op = "LEFT_ASSIGN"
+
+  }
+
+  transformers
 }
