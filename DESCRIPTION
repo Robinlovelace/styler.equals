@@ -10,12 +10,14 @@ Description: Styles code according to the 'equals style'
     'styler'.
 License: MIT + file LICENSE
 Imports: 
+    magrittr,
     purrr,
-    styler (>= 1.9.1)
+    rlang,
+    styler (>= 1.9.1),
+    vctrs
 Suggests: 
     fs,
     knitr,
-    rlang,
     testthat (>= 3.0.0),
     usethis,
     withr
@@ -24,3 +26,18 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Collate: 
+    'compat-dplyr.R'
+    'core.R'
+    'expr-is.R'
+    'indent.R'
+    'nest.R'
+    're-export.R'
+    'rules-indention.R'
+    'rules-line-break.R'
+    'rules-line-breaks.R'
+    'token-define.R'
+    'rules-spaces.R'
+    'rules-tokens.R'
+    'styler-equals-package.R'
+    'unindent.R'

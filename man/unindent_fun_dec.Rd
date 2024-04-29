@@ -8,9 +8,6 @@ unindent_fun_dec(pd, indent_by = 2L)
 }
 \arguments{
 \item{pd}{A parse table.}
-
-\item{indent_by}{How many spaces of indention should be inserted after
-operators such as '('.}
 }
 \description{
 Necessary for consistent indention of the function declaration header.

@@ -8,9 +8,6 @@ is_double_indent_function_declaration(pd, indent_by = 2L)
 }
 \arguments{
 \item{pd}{A parse table.}
-
-\item{indent_by}{How many spaces of indention should be inserted after
-operators such as '('.}
 }
 \description{
 Assumes you already checked if it's a function with
