@@ -49,10 +49,7 @@ a;
 
 text_styled_equals = style_text(text)
 text_styled_equals
-#> Warning: Could not use colored = TRUE, as the package prettycode is not
-#> installed. Please install it if you want to see colored output or see
-#> `?print.vertical` for more information.
 #> x = 4
 #> y = 3
-#> a;
+#> a
 ```

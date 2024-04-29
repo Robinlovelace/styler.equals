@@ -39,6 +39,10 @@ You can install the released version of {styler.equals} from [GitHub](https://gi
 remotes::install_github("robinlovelace/styler.equals")
 ```
 
+```{r, include=FALSE}
+devtools::load_all()
+```
+
 ## Example
 
 This is a basic example of how to style code with it.
@@ -53,4 +57,21 @@ a;
 
 text_styled_equals = style_text(text)
 text_styled_equals
+```
+
+A more complicated example showing that it also fixes other issues from the `styler` package is:
+
+```{r}
+style_text("a=2", scope = "tokens")
+style_text("a=2", scope = I(c("tokens", "indention")))
+```
+
+```{r}
+style_text(
+  "tibble::tibble(
+     small  = 2 ,
+     medium = 4,#comment without space
+     large  = 6
+   )"
+)
 ```
