@@ -53,3 +53,28 @@ text_styled_equals
 #> y = 3
 #> a
 ```
+
+A more complicated example showing that it also fixes other issues from
+the `styler` package is:
+
+``` r
+style_text("a=2", scope = "tokens")
+#> a = 2
+style_text("a=2", scope = I(c("tokens", "indention")))
+#> a=2
+```
+
+``` r
+style_text(
+  "tibble::tibble(
+     small  = 2 ,
+     medium = 4,#comment without space
+     large  = 6
+   )"
+)
+#> tibble::tibble(
+#>   small  = 2,
+#>   medium = 4, # comment without space
+#>   large  = 6
+#> )
+```
