@@ -2,15 +2,12 @@ Package: styler.equals
 Title: Third-Party 'Equals Style' Guide for 'styler'
 Version: 1.0.0
 Authors@R: c(
-    person("Robin", "Lovelace", email = "rob00x@gmail.com", role = c("aut","cre"),
-      comment = c(ORCID = "0000-0001-5679-6536")),
-    person(given = "Lorenz",
-             family = "Walthert",
-             role = c("aut"))
+    person("Robin", "Lovelace", , "rob00x@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5679-6536")),
+    person("Lorenz", "Walthert", role = "aut")
   )
-Description: Styles code according to the 'equals style'
-    used in the book Geocomputation with R using
-    'styler'.
+Description: Styles code according to the 'equals style' used in the book
+    Geocomputation with R using 'styler'.
 License: MIT + file LICENSE
 Imports: 
     purrr,
